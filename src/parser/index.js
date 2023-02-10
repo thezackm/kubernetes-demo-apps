@@ -6,21 +6,17 @@ const bodyParser = require('body-parser');
 // Add Winston logging for logs in context
 var winston = require('winston'),
     expressWinston = require('express-winston');
-const newrelicFormatter = require('@newrelic/winston-enricher')
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.locals.newrelic = newrelic;
 
-// Enable Wiston logger
+// Enable Winston logger
 app.use(expressWinston.logger({
   transports: [
     new winston.transports.Console()
   ],
-  format: winston.format.combine(
-    winston.format.json(),
-    newrelicFormatter()
-  ),
+  format: winston.format.json(),
   expressFormat: true,
   colorize: true
 }));
@@ -28,10 +24,7 @@ const logger = winston.createLogger({
   transports: [
     new winston.transports.Console()
   ],
-  format: winston.format.combine(
-    winston.format.json(),
-    newrelicFormatter()
-  ),
+  format: winston.format.json(),
 });
 
 // Do some heavy calculations
