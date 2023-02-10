@@ -16,7 +16,7 @@ const redisHost = process.env.GET_HOSTS_ENV !== 'env' ? 'redis-primary' : proces
 const client = redis.createClient({ host: redisHost, port: 6379 });
 app.locals.newrelic = newrelic;
 
-// Enable Wiston logger
+// Enable Winston logger
 app.use(expressWinston.logger({
   transports: [
     new winston.transports.Console()
