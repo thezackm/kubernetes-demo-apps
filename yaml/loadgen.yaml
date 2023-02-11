@@ -6,6 +6,6 @@ metadata:
     app: loadgen
 spec:
   containers:
-  - image: ghcr.io/kidk/kubernetes-demo-apps-loadgen:latest
+  - image: loadgen:minikube
     name: loadgen
   restartPolicy: Always

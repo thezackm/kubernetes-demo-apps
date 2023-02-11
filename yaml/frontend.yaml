@@ -32,7 +32,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: ghcr.io/kidk/kubernetes-demo-apps-frontend:latest
+        image: frontend:minikube
         resources:
           requests:
             cpu: 100m
