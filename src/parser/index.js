@@ -69,7 +69,7 @@ app.use(function(req, res, next) {
 });
 
 app.get('/healthz', function (req, res) {
-  newrelic.setIgnoreTransaction(true);
+  newrelic.transactionHandle.ignore();
   res.status(200).send('OK');
 });
 
