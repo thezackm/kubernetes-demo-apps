@@ -6,6 +6,6 @@ metadata:
     app: loadgen
 spec:
   containers:
-  - image: loadgen:minikube
+  - image: ghcr.io/thezackm/loadgen:0.0.1
     name: loadgen
   restartPolicy: Always

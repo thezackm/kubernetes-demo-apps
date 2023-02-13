@@ -34,7 +34,7 @@ spec:
     spec:
       containers:
       - name: parser
-        image: parser:minikube
+        image: ghcr.io/thezackm/parser:0.0.1
         livenessProbe:
           httpGet:
             path: /healthz
@@ -52,7 +52,7 @@ spec:
               name: newrelic-bundle-newrelic-infrastructure-config
               key: license
         - name: NEW_RELIC_APP_NAME
-          value: K8s guestbook - parser
+          value: K8s Guestbook - Parser
           # tells the node.js app to pause at random intervals
         - name: LOOK_BUSY
           value: f

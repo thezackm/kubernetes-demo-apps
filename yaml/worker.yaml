@@ -34,7 +34,7 @@ spec:
     spec:
       containers:
       - name: worker
-        image: worker:minikube
+        image: ghcr.io/thezackm/worker:0.0.1
         resources:
           requests:
             cpu: 50m
@@ -49,7 +49,7 @@ spec:
               name: newrelic-bundle-newrelic-infrastructure-config
               key: license
         - name: NEW_RELIC_APP_NAME
-          value: K8s guestbook - worker
+          value: K8s Guestbook - Worker
         - name: GET_HOSTS_FROM
           value: dns
           # If your cluster config does not include a dns service, then to

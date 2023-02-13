@@ -32,7 +32,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: frontend:minikube
+        image: ghcr.io/thezackm/frontend:0.0.1
         resources:
           requests:
             cpu: 100m
@@ -51,7 +51,7 @@ spec:
               name: newrelic-bundle-newrelic-infrastructure-config
               key: license
         - name: NEW_RELIC_APP_NAME
-          value: K8s guestbook - frontend
+          value: K8s Guestbook - Frontend
           # tells the node.js app to pause at random intervals
         - name: LOOK_BUSY
           value: f
