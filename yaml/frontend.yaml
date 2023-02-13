@@ -32,7 +32,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: ghcr.io/thezackm/frontend:0.0.1
+        image: ghcr.io/thezackm/frontend:0.0.2
         resources:
           requests:
             cpu: 100m
