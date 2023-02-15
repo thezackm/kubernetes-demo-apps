@@ -34,7 +34,7 @@ spec:
     spec:
       containers:
       - name: worker
-        image: ghcr.io/thezackm/worker:0.0.1
+        image: ghcr.io/thezackm/worker:0.0.3
         resources:
           requests:
             cpu: 50m

@@ -16,7 +16,7 @@
     "express-winston": "latest",
     "newrelic": "latest",
     "pug": "latest",
-    "redis": "^2.8.0",
+    "redis": "latest",
     "winston": "latest"
   }
 }
