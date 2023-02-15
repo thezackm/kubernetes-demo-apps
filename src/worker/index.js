@@ -115,7 +115,7 @@ var listenToQueue = function() {
         return ch.consume(q, function(msg) {
           lookBusy();
           var message = msg.content.toString();
-          
+
           pushToRedis(message);
 
           notifyThirdParty();
@@ -132,6 +132,7 @@ var listenToQueue = function() {
 client.on('error', function(err) {
   logger.error('Worker: Could not connect to redis host:', err);
   newrelic.noticeError(err);
+  exit(100);
 })
 
 listenToQueue();

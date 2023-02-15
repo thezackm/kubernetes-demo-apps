@@ -8,6 +8,7 @@ const querystring = require('querystring');
 // Add Winston logging for logs in context
 var winston = require('winston'),
     expressWinston = require('express-winston');
+const { exit } = require('process');
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -131,4 +132,5 @@ app.listen(process.env.PORT || 3000, function () {
 client.on('error', function(err) {
   logger.error('Frontend: Could not connect to redis host:', err);
   newrelic.noticeError(err);
+  exit(100);
 })
